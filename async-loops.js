@@ -1,5 +1,6 @@
 function loadUsers(userIds, load, done) {
-  var users = userIds.map(function (userId) {
+  var users = []
+  userIds.forEach(function (userId) {
     users.push(load(userId, function (user) {
       return user
     }))
